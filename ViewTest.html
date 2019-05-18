@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style type="text/css">
+        .carousel-item {
+            height: 70vh;
+        }
+        .carousel-item > img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            max-height: none !important;
+            max-width: none !important;
+            min-height: 100%;
+            min-width: 100%;
+
+        }
+        .hr-text {
+            line-height: 1em;
+            position: relative;
+            outline: 0;
+            border: 0;
+            color: black;
+            text-align: center;
+            height: 1.5em;
+            opacity: .5;
+        }
+        .hr-text:before {
+            content: '';
+            background: -webkit-linear-gradient(left, transparent, #818078, transparent);
+            background: linear-gradient(to right, transparent, #818078, transparent);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+        }
+            .hr-text:after {
+            content: attr(data-content);
+            position: relative;
+            display: inline-block;
+            color: black;
+            padding: 0 .5em;
+            line-height: 1.5em;
+            color: #818078;
+            background-color: #fcfcfa;
+        }
+    </style> 
+    <script>
+        window.onload = function () {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,  
+            title:{
+                text: "OnlinePerDay(In2Week)"
+            },
+            axisY: {
+                title: "people",
+                valueFormatString: "",
+                suffix: "people",
+                stripLines: [{
+                    value: 30,
+                    label: "Team Management limit"
+                }]
+            },
+            data: [{
+                type: "spline", 
+                showInLegend: true,
+                yValueFormatString: "##people",
+                name: "OnlinePerDays",
+                dataPoints: [
+                { label: "Day1", y: 8 },
+                { label: "Day2", y: 22 },
+                { label: "Day3", y: 14 },
+                { label: "Day4", y: 12 },
+                { label: "Day5", y: 26 },
+                { label: "Day6", y: 27 },
+                { label: "Day7", y: 19 },
+                { label: "Day8", y: 12 },
+                { label: "Day9", y: 15 },
+                { label: "Day10", y: 14 },
+                { label: "Day11", y: 14 },
+                { label: "Day12", y: 17 },
+                { label: "Day13", y: 13 },
+                { label: "Day14", y: 4 }
+                ]
+            }]
+        });
+        chart.render();
+        var chart = new CanvasJS.Chart("chartContainer2", {
+            animationEnabled: true,
+            title: {
+                text: "Gender Ratio"
+            },
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: 79.45, label: "Female"},
+                    {y: 7.31, label: "Male"},
+                    {y: 7.06, label: "Cast"},
+                    {y: 4.91, label: "Other"}
+                ]
+            }]
+        });
+        chart.render();
+        var chart = new CanvasJS.Chart("chartContainer3", {
+            animationEnabled: true,
+            title: {
+                text: "Gender Ratio"
+            },
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: 79.45, label: "Female"},
+                    {y: 7.31, label: "Male"},
+                    {y: 7.06, label: "Cast"},
+                    {y: 4.91, label: "Other"}
+                ]
+            }]
+        });
+        chart.render();
+        }
+    </script>
+</head>
+<body>
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="jumbotron jumbotron-fluid bg-white">
+                        <h1 class="display-4">Fluid jumbotron</h1>
+                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="col-sm-12 col-md-12 col-lg-12">
+    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+</div>
+<hr class="hr-text" data-content="AND">
+<div class="row">
+    <div class="col-md-1 col-lg-1"></div>
+    <div class="col-sm-12 col-md-5 col-lg-5">
+            <div class="jumbotron jumbotron-fluid bg-white">
+                <h1 class="display-6">Gender Ratio</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <div id="chartContainer2" style="height: 400px; width: 100%;"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1 col-lg-1"></div>
+    <div class="col-sm-12 col-md-5 col-lg-5">
+            <div class="jumbotron jumbotron-fluid bg-white">
+                <h1 class="display-6">Gender Ratio</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+        <div id="chartContainer3" style="height: 400px; width: 100%;"></div>
+    </div>
+</div>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
