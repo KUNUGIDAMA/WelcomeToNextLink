@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap&subset=japanese');
+html,body{
+  margin:0;
+  height:120%;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
