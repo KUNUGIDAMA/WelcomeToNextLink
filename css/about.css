@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|Kosugi+Maru|M+PLUS+Rounded+1c&display=swap');
+.TopJumbotron { background:url(/img/Sky.jpg) center no-repeat; background-size: cover; height: 800px;}
+h1 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+h2 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: white;
+  
+}
+p {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+strong {
+    font-family: 'Arvo', serif;
+}
+
+/* ページ遷移用*/
+h1 #NextTag {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* CenterManuの表示調整 */
+.row_CenterManu {
+    background-color: white;
+    margin-top: -5%;
+}
+
+/* CardManuの表示調整 */
+.row_CardManu {
+    background-color: white;
+    padding-top: 5%;
+}
+
+
+a_Scroll　{
+    padding-top: 60px;
+    color: black;
+  }
+  a span {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid rgb(12, 6, 6);
+    border-bottom: 1px solid rgb(12, 6, 6);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    box-sizing: border-box;
+    
+  }
+  @-webkit-keyframes sdb {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+      -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+  }
+  @keyframes sdb {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+      transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+      transform: rotate(-45deg) translate(0, 0);
+    }
+  }

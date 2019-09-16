@@ -5,6 +5,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/album.css">
     <style type="text/css">
         .carousel-item {
             height: 70vh;
@@ -54,15 +55,25 @@
             color: #818078;
             background-color: #fcfcfa;
         }
+
+        .NextTag {
+            padding-top: 10%;
+        }
+
+        .NextTagMdd {
+            padding-top: 5%;
+        }
+
+        /* 背景：テトラポッド bck01.jpg */
+        body {
+            background: url(img/bck01.jpg)
+        }
     </style> 
     <script>
         window.onload = function () {
 
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,  
-            title:{
-                text: "OnlinePerDay(In2Week)"
-            },
             axisY: {
                 title: "people",
                 valueFormatString: "",
@@ -79,28 +90,25 @@
                 name: "OnlinePerDays",
                 dataPoints: [
                 { label: "Day1", y: 8 },
-                { label: "Day2", y: 22 },
+                { label: "Day2", y: 15 },
                 { label: "Day3", y: 14 },
                 { label: "Day4", y: 12 },
-                { label: "Day5", y: 26 },
-                { label: "Day6", y: 27 },
-                { label: "Day7", y: 19 },
+                { label: "Day5", y: 13 },
+                { label: "Day6", y: 14 },
+                { label: "Day7", y: 17 },
                 { label: "Day8", y: 12 },
-                { label: "Day9", y: 15 },
+                { label: "Day9", y: 17 },
                 { label: "Day10", y: 14 },
                 { label: "Day11", y: 14 },
                 { label: "Day12", y: 17 },
                 { label: "Day13", y: 13 },
-                { label: "Day14", y: 4 }
+                { label: "Day14", y: 18 }
                 ]
             }]
         });
         chart.render();
         var chart = new CanvasJS.Chart("chartContainer2", {
             animationEnabled: true,
-            title: {
-                text: "Gender Ratio"
-            },
             data: [{
                 type: "pie",
                 startAngle: 240,
@@ -117,9 +125,6 @@
         chart.render();
         var chart = new CanvasJS.Chart("chartContainer3", {
             animationEnabled: true,
-            title: {
-                text: "Lingerie color"
-            },
             data: [{
                 type: "pie",
                 startAngle: 240,
@@ -138,60 +143,217 @@
             }]
         });
         chart.render();
+        var chart = new CanvasJS.Chart("chartChCount", {
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: 8.3, label: "1体"},
+                    {y: 50, label: "4体"},
+                    {y: 25, label: "10体"},
+                    {y: 16.7, label: "16体"}
+                ]
+            }]
+        });
+        chart.render();
+        var chart = new CanvasJS.Chart("1stClass", {
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: 8.3, label: "1体"},
+                    {y: 50, label: "4体"},
+                    {y: 25, label: "10体"},
+                    {y: 16.7, label: "16体"}
+                ]
+            }]
+        });
+        chart.render();
+        var chart = new CanvasJS.Chart("UsedSpCh", {
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: 8.3, label: "1体"},
+                    {y: 50, label: "4体"},
+                    {y: 25, label: "10体"},
+                    {y: 16.7, label: "16体"}
+                ]
+            }]
+        });
+        chart.render();
+        var chart = new CanvasJS.Chart("FrendCount", {
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: 41.7, label: "10人未満"},
+                    {y: 33.3, label: "30人未満"},
+                    {y: 16.7, label: "50人未満"},
+                    {y: 8.3, label: "全人類友達"}
+                ]
+            }]
+        });
+        chart.render();
+        var chart = new CanvasJS.Chart("CS", {
+            animationEnabled: true,
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                yValueFormatString: "##0.00\"%\"",
+                indexLabel: "{label} {y}",
+                dataPoints: [
+                    {y: 100, label: "満足"}
+                ]
+            }]
+        });
+        chart.render();
         }
+
     </script>
 </head>
 <body>
-        <nav class="site-header sticky-top py-1">
-            <div class="container d-flex flex-column flex-md-row justify-content-between">
-                    <a class="py-2">
-                        <div class="d-block mx-auto">WelcomeToNextLink</div>
-                    </a>
-                    <a class="py-2 d-none d-md-inline-block" href="index.html">Top</a>
-                    <a class=" py-2 d-none d-md-inline-block" href="Event.html">TeamEvent</a>
-                    <a class=" py-2 d-none d-md-inline-block" href="#">MemberComment</a>
-                    <a class=" py-2 d-none d-md-inline-block" href="TeamData.html">TeamDate</a>
+    <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                    <p class="text-muted">初めに<br>チームエタニティリンクが出来てから早くも４年が経過しました。<br>現在もチーム拡大を狙う我々は新たな仲間を募集しています。<br>貴方が加われば百人力！ということは別に求めていないですが、<br>
+                        私たちと一緒に冒険、おしゃべり、しませんか？</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Menu</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="Album.html" class="text-white">TeamEvent</a></li>
+                        <li><a href="#" class="text-white">Voice</a></li>
+                        <li><a href="TeamData.html" class="text-white">TeamDate</a></li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
             </div>
-        </nav>
+            <div class="navbar navbar-dark bg-dark box-shadow">
+                <div class="container d-flex justify-content-between">
+                <a href="about.html" class="navbar-brand d-flex align-items-center">
+                    <strong>WelcomToNextLink</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+            </div>
+        </header>
     <div class="container">
-        <div class="row">
+        <div class="row row_Album">
             <div class="col-lg-12 text-center">
-                <div class="jumbotron jumbotron-fluid bg-white">
+                <div class="jumbotron TopJumbotron" style="background:url(img/yukino/StdYukino.jpg);  background-size:cover;">
                         <h1 class="display-4">TeamData</h1>
                         <p class="lead">数字で見たエタニティリンクネクスト！</p>
                 </div>
             </div>
         </div>
     </div>
-<div class="col-sm-12 col-md-12 col-lg-12">
-    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
-</div>
-<hr class="hr-text" data-content="AND">
-<div class="row">
-    <div class="col-md-1 col-lg-1"></div>
-    <div class="col-sm-12 col-md-5 col-lg-5">
-            <div class="jumbotron jumbotron-fluid bg-white">
-                <h1 class="display-6">Gender Ratio -男女比</h1>
-                <p class="lead">アークス男女比が明らかに！圧倒的女ｧ！男の尻みるより女の尻見てたほうが楽しいから（暴論）</p>
+    <div class="container">
+        <div class="row row_Album NextTagMdd">
+            <div class="col-md-12">
+                <h3 class="text-align">このページについて</h3>
+                <p class="text-align">
+                    こちらのページではチーム内に関わる数値的なデータについて扱います。<br>
+                    「アットホームな雰囲気です」とか「風通しがいいです」とか御託はいいから数字が見たいですよね。<br>
+                    そんなせっかちな貴方の為に用意しました。参考までに見てください。<br>
+                    表示されている値はすべて静的なもので、ゲームサーバーから動的取得しているものではありません。<br>
+                    (したら規約違反ですけどね)なので、最新のデータではない可能性があります。予めご了承ください。<br>
+                </p>
             </div>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-6">
-        <div id="chartContainer2" style="height: 400px; width: 100%;"></div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-1 col-lg-1"></div>
-    <div class="col-sm-12 col-md-5 col-lg-5">
-            <div class="jumbotron jumbotron-fluid bg-white">
-                <h1 class="display-6">Lingerie color</h1>
-                <p class="lead">Inside the skirt is the universe.</p>
+        </div>
+        <div class="row row_Album NextTagMdd">
+            <div class="col-md-12">
+                <h3 class="text-align">OnlinePerDay(In2Weeek) -オンライン人口</h3>
+                <p class="text-align">
+                    オンライン人口はピークタイム時平均約10～15人程度となります(ピークタイム時の定義は19～22時と定義)。<br>
+                    ROMプレイヤーは平均してログイン中の人間の半分から1/3程度で比較的チャットレスポンスはあるものと思います。<br>
+                    (ROMプレイヤーの定義は時折挨拶を返さないチームメンバの総数をカウント。)<br>
+                    緊急クエ以外ログイン中の人数のうちクエストへ向かっているのは半分から1/10程度となります。<br>
+                    とある２週間を抜き取り、ログイン状況を下記の表にしました。参考にしてください。<br>
+                </p>
             </div>
+            <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+        </div>
     </div>
-    <div class="col-sm-12 col-md-6 col-lg-6">
-        <div id="chartContainer3" style="height: 400px; width: 100%;"></div>
+    <div class="container">
+        <div class="row row_Album">
+            <div class="col-sm-12 col-md-12 col-lg-12 NextTagMdd">
+                <h3 class="text-align">Questionnaire results -チーム内アンケート取得</h3>
+                <P class="text-align">
+                    以下では2019年8月頃に実施したチーム内アンケートを元にデータを集計、順不同に並べたものになります。<br>
+                    特に解説も必要ないデータなので、こういう話が話題に上がるチームなのだな、程度に思っていただけると幸いです。<br>
+                    しかし実際数値としてみれば、どのような雰囲気かが少し見えてきそうですね<br>
+                    一部データはアンケートではなく、運営側で集めたものもありますが、基本的にはアンケートをもとにしています。<br>
+                    回答内容を出来るだけ尊重した結果、謎の数値が出ている個所もありますが、気にしないでください。<br>
+                </P>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h3 class="text-center">所持キャラ数</h3>
+                <div id="chartChCount" style="height: 400px; width: 100%;"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h3 class="text-center">男女比</h3>
+                <div id="chartContainer2" style="height: 400px; width: 100%;"></div>
+            </div>
+        </div>
+        <div class="row row_Album">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h3 class="text-center">一番好きなクラスは？</h3>
+                <div id="1stClass" style="height: 400px; width: 100%;"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h3 class="text-center">サポートキャラは使う？</h3>
+                <div id="UsedSpCh" style="height: 400px; width: 100%;"></div>
+            </div>
+        </div>
+        <div class="row row_Album">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h3 class="text-center">フレンドは何人？</h3>
+                <div id="FrendCount" style="height: 400px; width: 100%;"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h3 class="text-center">現在のチームに満足？</h3>
+                <div id="CS" style="height: 400px; width: 100%;"></div>
+            </div>
+        </div>
     </div>
-</div>
-<h1 class="display-4 text-center">工事中</h1>
+    <div class="container">
+        <div class="row row_Album NextTag">
+            <h3 class="text-center col-sm-12 col-md-12 col-lg-12">Lingerie color -下着の色比率</h3>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="jumbotron jumbotron-fluid bg-white">
+                        <p class="lead">要望の多かった企画を通しました。マスターの承認済みです。女性アークスはマスターを恨んでください（華麗なる責任転嫁）
+
+                        </p>
+                    </div>
+
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div id="chartContainer3" style="height: 400px; width: 100%;"></div>
+            </div>
+        </div>
+    <footer>
+        <p>&copy;Copyright SEGA <br>SSの版権は株式会社セガホールディングスに所属します。</p>
+        <p>&copy;Copyright DaiwaPyon <br>一部フリー素材を除くイラストの版権は当Webサイトに所属します。</p>
+    </footer>
+    </div>
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>

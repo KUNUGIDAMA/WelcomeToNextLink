@@ -6,7 +6,7 @@
             <meta name="description" content="">
             <meta name="author" content="">
         
-            <title>Welcom To Next Link!</title>
+            <title>PageTitle</title>
         
             <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
         
@@ -18,55 +18,99 @@
 
             <!--背景CSS 元Saas-->
             <link href="css/back.css" rel="stylesheet">
-        
+
+            <!--ローディングバー-->
+            <link rel="stylesheet" href="css/load.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+
+            <script>
+              $(function(){
+                  Pace.on('done', function(){
+                      $('.wrap').fadeIn();
+                  });
+              });
+            </script>
     </head>
     <body>
-            <header>
-                    <div class="collapse bg-dark" id="navbarHeader">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-sm-8 col-md-7 py-4">
-                            <p class="text-muted">人との”縁”が輪のように連なり、そのつながりの中で楽しくPSO2をプレイしたい。　その思いも今年で5周年になりました。我がチームは引き続き新たな”縁”を求めています！</p>
-                          </div>
-                          <div class="col-sm-4 offset-md-1 py-4">
-                            <h4 class="text-white">Menu</h4>
-                            <ul class="list-unstyled">
-                              <li><a href="index.html" class="text-white">TeamEvent</a></li>
-                              <li><a href="#" class="text-white">History</a></li>
-                              <li><a href="#" class="text-white">TeamDate</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="navbar navbar-dark bg-dark box-shadow">
-                      <div class="container d-flex justify-content-between">
-                        <a href="#" class="navbar-brand d-flex align-items-center">
-                          <strong>EternityLink</strong>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                      </div>
-                    </div>
-            </header>
-            <div id="particles-js"></div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6 text">
-                            <h1>Welcom To Next Link</h1>
-                            <p>我々のチームは新しい仲間を求めています！<br>TeamHomePage(リンク仮置き)</a></p>
-                    </div>
-                    <div class="col-sm-12 col-md-5 col-lg-6 TeamImage">
-                            <img src="img/EN_en.png" class="rounded mx-auto d-block">
-                    </div>
-                </div>
+      <header>
+        <!--意味のない記述があるが可読性のために置いておく-->
+        <div class="collapse bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <p class="text-muted"></p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h4 class="text-white">Menu</h4>
+                <ul class="list-unstyled">
+                  <li><a href="index.html" class="text-white">TeamEvent</a></li>
+                  <li><a href="#" class="text-white">History</a></li>
+                  <li><a href="#" class="text-white">TeamDate</a></li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <strong>TopPages</strong>
+            </a>
+            <!--導線を保ちたいのでここではメニューを無効化-->
+            <!--
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            -->
+          </div>
+        </div>
+      </header>
+      <!--JSの描画(背景)-->
+      <div id="particles-js"></div>
+
+      <!--PCサイズでの描画-->
+      <!--
+        <div class="d-none d-sm-block">
+          <div class="container">
+            <div class="row">
+              <div class="text Top">
+                <h1>sample</h1>
+                <p>hogehoge<br>(リンク仮置き)</a></p>
+                <img src="img/EN_en.png" class="TeamImage">
+              </div>
+              <div class="col-sm-12 col-md-5 col-lg-6 ">
+              </div>
+            </div>
+          </div>
+        </div>
+      -->
+    
+    <!--TopIcon描画-->
+    <!--PCサイズでの描画-->
+    <div class="d-none d-sm-block">
+      <div class="pc pctext">
+        <div class="text-center">
+          <h1>TextText</h1>
+          <p>hogehoge<br>(リンク仮置き)<br>AAAAAA?PC<br><a href="Album1.html" class="btn btn-outline-primary" role="button">More...</a></p>
+          <img src="img/EN_en.png" class="TeamImage">
+        </div>
+      </div>
+    </div>
+
+    <!--スマホサイズでの描画-->
+    <div class="d-block d-sm-none">
+      <div class="smart">
+          <div class="text-center">
+            <h1>TextText</h1>
+            <p>hogehoge<br>(リンク仮置き)<br>AAAAAA?PC</p>
+            <a href="Album1.html" class="btn btn-outline-primary" role="button">More...</a>
+            <img src="img/EN_en.png" class="TeamImage">
+          </div>
+      </div>
+    </div>
 
     </body>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- Bootstrap core JavaScript-->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -74,4 +118,9 @@
     <script src="js/back.js"></script>
     <canvas class="background"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script>
+
+
+    </script>
+    
 </html>
