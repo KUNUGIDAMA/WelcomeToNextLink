@@ -10,9 +10,12 @@
     margin-bottom: 1.25rem;
     color: #999;
   }
-
+  .NextTag {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
   /* Blog用の装飾見出しを描画*/
-  .Blog_h3 {
+  .Blog_h4 {
     background: #d9e0e7;
     box-shadow: 0px 0px 0px 5px #d9e0e7;
     border: dashed 2px white;
@@ -52,18 +55,3 @@
     right: 7px;
   }
 
-  /* 注意のマーク描画*/
-  h6 {
-    position: relative;
-  }
-  
-  h6:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 7px;
-    background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
-    background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
-  }
